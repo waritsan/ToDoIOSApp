@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B8CF9981CC5D0BE008C9EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9971CC5D0BE008C9EC6 /* AppDelegate.swift */; };
-		2B8CF99A1CC5D0BE008C9EC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9991CC5D0BE008C9EC6 /* ViewController.swift */; };
 		2B8CF99D1CC5D0BE008C9EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CF99B1CC5D0BE008C9EC6 /* Main.storyboard */; };
 		2B8CF99F1CC5D0BE008C9EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CF99E1CC5D0BE008C9EC6 /* Assets.xcassets */; };
 		2B8CF9A21CC5D0BE008C9EC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CF9A01CC5D0BE008C9EC6 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,9 @@
 		2B8CF9BE1CC5DE36008C9EC6 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9BD1CC5DE36008C9EC6 /* LocationTests.swift */; };
 		2B8CF9C01CC5E499008C9EC6 /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9BF1CC5E498008C9EC6 /* ItemManagerTests.swift */; };
 		2B8CF9C21CC5E529008C9EC6 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9C11CC5E529008C9EC6 /* ItemManager.swift */; };
+		2B8CF9CA1CC774E8008C9EC6 /* ItemListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9C91CC774E8008C9EC6 /* ItemListViewControllerTests.swift */; };
+		2B8CF9CC1CC7770C008C9EC6 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9CB1CC7770C008C9EC6 /* ItemListViewController.swift */; };
+		2B8CF9CE1CC79B0C008C9EC6 /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9CD1CC79B0C008C9EC6 /* ItemListDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,6 @@
 /* Begin PBXFileReference section */
 		2B8CF9941CC5D0BD008C9EC6 /* ToDoIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8CF9971CC5D0BE008C9EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B8CF9991CC5D0BE008C9EC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2B8CF99C1CC5D0BE008C9EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B8CF99E1CC5D0BE008C9EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B8CF9A11CC5D0BE008C9EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +47,10 @@
 		2B8CF9BD1CC5DE36008C9EC6 /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTests.swift; path = Model/LocationTests.swift; sourceTree = "<group>"; };
 		2B8CF9BF1CC5E498008C9EC6 /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemManagerTests.swift; path = Model/ItemManagerTests.swift; sourceTree = "<group>"; };
 		2B8CF9C11CC5E529008C9EC6 /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemManager.swift; path = Model/ItemManager.swift; sourceTree = "<group>"; };
+		2B8CF9C51CC750BF008C9EC6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B8CF9C91CC774E8008C9EC6 /* ItemListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListViewControllerTests.swift; path = Controller/ItemListViewControllerTests.swift; sourceTree = "<group>"; };
+		2B8CF9CB1CC7770C008C9EC6 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListViewController.swift; path = Controller/ItemListViewController.swift; sourceTree = "<group>"; };
+		2B8CF9CD1CC79B0C008C9EC6 /* ItemListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListDataProvider.swift; path = Controller/ItemListDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 				2B8CF9961CC5D0BE008C9EC6 /* ToDoIOSApp */,
 				2B8CF9AB1CC5D0BE008C9EC6 /* ToDoIOSAppTests */,
 				2B8CF9951CC5D0BD008C9EC6 /* Products */,
+				2B8CF9C51CC750BF008C9EC6 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,10 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				2B8CF9971CC5D0BE008C9EC6 /* AppDelegate.swift */,
-				2B8CF9991CC5D0BE008C9EC6 /* ViewController.swift */,
-				2B8CF9B91CC5D6A4008C9EC6 /* ToDoItem.swift */,
-				2B8CF9BB1CC5DAC5008C9EC6 /* Location.swift */,
-				2B8CF9C11CC5E529008C9EC6 /* ItemManager.swift */,
+				2B8CF9CB1CC7770C008C9EC6 /* ItemListViewController.swift */,
+				2B8CF9CD1CC79B0C008C9EC6 /* ItemListDataProvider.swift */,
+				2B8CF9C81CC77480008C9EC6 /* Model */,
 				2B8CF99B1CC5D0BE008C9EC6 /* Main.storyboard */,
 				2B8CF99E1CC5D0BE008C9EC6 /* Assets.xcassets */,
 				2B8CF9A01CC5D0BE008C9EC6 /* LaunchScreen.storyboard */,
@@ -103,12 +108,31 @@
 		2B8CF9AB1CC5D0BE008C9EC6 /* ToDoIOSAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				2B8CF9C71CC77472008C9EC6 /* Model */,
+				2B8CF9AE1CC5D0BE008C9EC6 /* Info.plist */,
+				2B8CF9C91CC774E8008C9EC6 /* ItemListViewControllerTests.swift */,
+			);
+			path = ToDoIOSAppTests;
+			sourceTree = "<group>";
+		};
+		2B8CF9C71CC77472008C9EC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				2B8CF9B71CC5D40F008C9EC6 /* ToDoItemTests.swift */,
 				2B8CF9BD1CC5DE36008C9EC6 /* LocationTests.swift */,
 				2B8CF9BF1CC5E498008C9EC6 /* ItemManagerTests.swift */,
-				2B8CF9AE1CC5D0BE008C9EC6 /* Info.plist */,
 			);
-			path = ToDoIOSAppTests;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2B8CF9C81CC77480008C9EC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B8CF9B91CC5D6A4008C9EC6 /* ToDoItem.swift */,
+				2B8CF9BB1CC5DAC5008C9EC6 /* Location.swift */,
+				2B8CF9C11CC5E529008C9EC6 /* ItemManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,11 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B8CF99A1CC5D0BE008C9EC6 /* ViewController.swift in Sources */,
 				2B8CF9C21CC5E529008C9EC6 /* ItemManager.swift in Sources */,
+				2B8CF9CE1CC79B0C008C9EC6 /* ItemListDataProvider.swift in Sources */,
 				2B8CF9981CC5D0BE008C9EC6 /* AppDelegate.swift in Sources */,
 				2B8CF9BC1CC5DAC5008C9EC6 /* Location.swift in Sources */,
 				2B8CF9BA1CC5D6A4008C9EC6 /* ToDoItem.swift in Sources */,
+				2B8CF9CC1CC7770C008C9EC6 /* ItemListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +254,7 @@
 				2B8CF9C01CC5E499008C9EC6 /* ItemManagerTests.swift in Sources */,
 				2B8CF9BE1CC5DE36008C9EC6 /* LocationTests.swift in Sources */,
 				2B8CF9B81CC5D40F008C9EC6 /* ToDoItemTests.swift in Sources */,
+				2B8CF9CA1CC774E8008C9EC6 /* ItemListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +436,7 @@
 				2B8CF9B31CC5D0BE008C9EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B8CF9B41CC5D0BE008C9EC6 /* Build configuration list for PBXNativeTarget "ToDoIOSAppTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +445,7 @@
 				2B8CF9B61CC5D0BE008C9EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
