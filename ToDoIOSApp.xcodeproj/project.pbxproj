@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B47236B1CC885D0007508A5 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47236A1CC885D0007508A5 /* ItemListDataProviderTests.swift */; };
+		2B47236F1CC8BAAB007508A5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47236E1CC8BAAB007508A5 /* ItemCell.swift */; };
 		2B8CF9981CC5D0BE008C9EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CF9971CC5D0BE008C9EC6 /* AppDelegate.swift */; };
 		2B8CF99D1CC5D0BE008C9EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CF99B1CC5D0BE008C9EC6 /* Main.storyboard */; };
 		2B8CF99F1CC5D0BE008C9EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CF99E1CC5D0BE008C9EC6 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B47236A1CC885D0007508A5 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListDataProviderTests.swift; path = Controller/ItemListDataProviderTests.swift; sourceTree = "<group>"; };
+		2B47236E1CC8BAAB007508A5 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = Controller/ItemCell.swift; sourceTree = "<group>"; };
 		2B8CF9941CC5D0BD008C9EC6 /* ToDoIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8CF9971CC5D0BE008C9EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B8CF99C1CC5D0BE008C9EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				2B8CF99E1CC5D0BE008C9EC6 /* Assets.xcassets */,
 				2B8CF9A01CC5D0BE008C9EC6 /* LaunchScreen.storyboard */,
 				2B8CF9A31CC5D0BE008C9EC6 /* Info.plist */,
+				2B47236E1CC8BAAB007508A5 /* ItemCell.swift */,
 			);
 			path = ToDoIOSApp;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 				2B8CF9C71CC77472008C9EC6 /* Model */,
 				2B8CF9AE1CC5D0BE008C9EC6 /* Info.plist */,
 				2B8CF9C91CC774E8008C9EC6 /* ItemListViewControllerTests.swift */,
+				2B47236A1CC885D0007508A5 /* ItemListDataProviderTests.swift */,
 			);
 			path = ToDoIOSAppTests;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				2B8CF9CE1CC79B0C008C9EC6 /* ItemListDataProvider.swift in Sources */,
 				2B8CF9981CC5D0BE008C9EC6 /* AppDelegate.swift in Sources */,
 				2B8CF9BC1CC5DAC5008C9EC6 /* Location.swift in Sources */,
+				2B47236F1CC8BAAB007508A5 /* ItemCell.swift in Sources */,
 				2B8CF9BA1CC5D6A4008C9EC6 /* ToDoItem.swift in Sources */,
 				2B8CF9CC1CC7770C008C9EC6 /* ItemListViewController.swift in Sources */,
 			);
@@ -251,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B47236B1CC885D0007508A5 /* ItemListDataProviderTests.swift in Sources */,
 				2B8CF9C01CC5E499008C9EC6 /* ItemManagerTests.swift in Sources */,
 				2B8CF9BE1CC5DE36008C9EC6 /* LocationTests.swift in Sources */,
 				2B8CF9B81CC5D40F008C9EC6 /* ToDoItemTests.swift in Sources */,

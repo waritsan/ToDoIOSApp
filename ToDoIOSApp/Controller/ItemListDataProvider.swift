@@ -9,12 +9,34 @@
 import UIKit
 
 class ItemListDataProvider: NSObject, UITableViewDataSource {
+    var itemManager: ItemManager!
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        guard let itemManager = itemManager
+            else { return 0 }
+        guard let itemSection = Section(rawValue: section)
+            else { fatalError() }
+        let numberOfRows: Int
+        switch itemSection {
+        case .ToDo:
+            numberOfRows = itemManager.toDoCount
+        case .Done:
+            numberOfRows = itemManager.doneCount
+            print(numberOfRows)
+        }
+        return numberOfRows
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return ItemCell()
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+}
+
+enum Section: Int {
+    case ToDo
+    case Done
 }
