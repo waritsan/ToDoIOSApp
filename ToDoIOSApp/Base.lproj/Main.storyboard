@@ -130,5 +130,70 @@
             </objects>
             <point key="canvasLocation" x="483" y="-147"/>
         </scene>
+        <!--Input View Controller-->
+        <scene sceneID="MnD-8o-t6F">
+            <objects>
+                <viewController storyboardIdentifier="InputViewController" id="rl7-CQ-2w6" customClass="InputViewController" customModule="ToDoIOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VkY-sn-Q8d"/>
+                        <viewControllerLayoutGuide type="bottom" id="tT4-l2-n7d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J51-Tm-hSg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vrf-7U-0G4">
+                                <rect key="frame" x="252" y="28" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-yj-uUJ">
+                                <rect key="frame" x="252" y="66" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tXj-s7-48Z">
+                                <rect key="frame" x="252" y="104" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qjE-T1-a6Z">
+                                <rect key="frame" x="252" y="142" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUi-k9-gj7">
+                                <rect key="frame" x="121" y="226" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi5-ON-ASe">
+                                <rect key="frame" x="335" y="226" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="save" destination="rl7-CQ-2w6" eventType="touchUpInside" id="9tO-Ds-HnW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-Yx-fQG">
+                                <rect key="frame" x="252" y="188" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="tXj-s7-48Z" id="1L4-QV-7JS"/>
+                        <outlet property="cancelButton" destination="PUi-k9-gj7" id="aWd-YS-v6O"/>
+                        <outlet property="dateTextField" destination="cYy-yj-uUJ" id="rJn-AT-exJ"/>
+                        <outlet property="descriptionTextField" destination="qjE-T1-a6Z" id="vJB-Aj-REq"/>
+                        <outlet property="locationTextField" destination="gK2-Yx-fQG" id="2Vf-2R-0Jw"/>
+                        <outlet property="saveButton" destination="gi5-ON-ASe" id="Wof-mg-OYE"/>
+                        <outlet property="titleTextField" destination="Vrf-7U-0G4" id="zxP-bp-xJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWn-Z2-y5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="-147"/>
+        </scene>
     </scenes>
 </document>
