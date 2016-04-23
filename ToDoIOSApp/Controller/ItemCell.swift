@@ -9,4 +9,7 @@
 import UIKit
 
 class ItemCell: UITableViewCell {
+    func configCellWithItem(item: ToDoItem) {
+        
+    }
 }
