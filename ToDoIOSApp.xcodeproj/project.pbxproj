@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B239BFE1CCAF86800D5D937 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B239BFD1CCAF86800D5D937 /* ItemCellTests.swift */; };
 		2B239C001CCB398600D5D937 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B239BFF1CCB398600D5D937 /* DetailViewControllerTests.swift */; };
 		2B239C021CCB3A4900D5D937 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B239C011CCB3A4900D5D937 /* DetailViewController.swift */; };
 		2B239C041CCB59CC00D5D937 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B239C031CCB59CC00D5D937 /* MapKit.framework */; };
 		2B239C061CCB694700D5D937 /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B239C051CCB694700D5D937 /* InputViewControllerTests.swift */; };
 		2B239C081CCB69FD00D5D937 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B239C071CCB69FD00D5D937 /* InputViewController.swift */; };
+		2B276E0E1CCDFBA7002D6D18 /* StoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B276E0D1CCDFBA7002D6D18 /* StoryboardTests.swift */; };
+		2B276E101CCDFC1A002D6D18 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B276E0F1CCDFC1A002D6D18 /* ItemCellTests.swift */; };
 		2B47236B1CC885D0007508A5 /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47236A1CC885D0007508A5 /* ItemListDataProviderTests.swift */; };
 		2B47236F1CC8BAAB007508A5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47236E1CC8BAAB007508A5 /* ItemCell.swift */; };
 		2B4F652B1CCC9436008A6A73 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F652A1CCC9436008A6A73 /* APIClientTests.swift */; };
@@ -44,12 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B239BFD1CCAF86800D5D937 /* ItemCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 		2B239BFF1CCB398600D5D937 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewControllerTests.swift; path = Controller/DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		2B239C011CCB3A4900D5D937 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
 		2B239C031CCB59CC00D5D937 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2B239C051CCB694700D5D937 /* InputViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputViewControllerTests.swift; path = Controller/InputViewControllerTests.swift; sourceTree = "<group>"; };
 		2B239C071CCB69FD00D5D937 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputViewController.swift; path = Controller/InputViewController.swift; sourceTree = "<group>"; };
+		2B276E0D1CCDFBA7002D6D18 /* StoryboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardTests.swift; sourceTree = "<group>"; };
+		2B276E0F1CCDFC1A002D6D18 /* ItemCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCellTests.swift; path = Controller/ItemCellTests.swift; sourceTree = "<group>"; };
 		2B47236A1CC885D0007508A5 /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListDataProviderTests.swift; path = Controller/ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 		2B47236E1CC8BAAB007508A5 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = Controller/ItemCell.swift; sourceTree = "<group>"; };
 		2B4F652A1CCC9436008A6A73 /* APIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
@@ -111,9 +113,9 @@
 			children = (
 				2B8CF9C91CC774E8008C9EC6 /* ItemListViewControllerTests.swift */,
 				2B47236A1CC885D0007508A5 /* ItemListDataProviderTests.swift */,
-				2B239BFD1CCAF86800D5D937 /* ItemCellTests.swift */,
 				2B239BFF1CCB398600D5D937 /* DetailViewControllerTests.swift */,
 				2B239C051CCB694700D5D937 /* InputViewControllerTests.swift */,
+				2B276E0F1CCDFC1A002D6D18 /* ItemCellTests.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				2B4F652A1CCC9436008A6A73 /* APIClientTests.swift */,
+				2B276E0D1CCDFBA7002D6D18 /* StoryboardTests.swift */,
 				2B8CF9C71CC77472008C9EC6 /* Model */,
 				2B4F65291CCC8DB5008A6A73 /* Controller */,
 				2B8CF9AE1CC5D0BE008C9EC6 /* Info.plist */,
@@ -311,12 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B239BFE1CCAF86800D5D937 /* ItemCellTests.swift in Sources */,
 				2B47236B1CC885D0007508A5 /* ItemListDataProviderTests.swift in Sources */,
 				2B8CF9C01CC5E499008C9EC6 /* ItemManagerTests.swift in Sources */,
 				2B239C061CCB694700D5D937 /* InputViewControllerTests.swift in Sources */,
 				2B8CF9BE1CC5DE36008C9EC6 /* LocationTests.swift in Sources */,
 				2B239C001CCB398600D5D937 /* DetailViewControllerTests.swift in Sources */,
+				2B276E0E1CCDFBA7002D6D18 /* StoryboardTests.swift in Sources */,
+				2B276E101CCDFC1A002D6D18 /* ItemCellTests.swift in Sources */,
 				2B4F652B1CCC9436008A6A73 /* APIClientTests.swift in Sources */,
 				2B8CF9B81CC5D40F008C9EC6 /* ToDoItemTests.swift in Sources */,
 				2B8CF9CA1CC774E8008C9EC6 /* ItemListViewControllerTests.swift in Sources */,

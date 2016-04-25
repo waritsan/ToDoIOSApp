@@ -24,13 +24,26 @@ class APIClient {
         guard let url = NSURL(string: "https://awesometodos.com/login?username=\(encodedUsername)&password=\(encodedPassword)") else {
             fatalError()
         }
+        // completionHandler
         let task = session.dataTaskWithURL(url) {
             (data, response, error) -> Void in
-            let responseDict = try!
-                NSJSONSerialization.JSONObjectWithData(data!, options: [])
-            let token = responseDict["token"] as! String
-            self.keychainManager?.setPassword(token, account: "token")
-        }
+            if error != nil {
+                completion(WebserviceError.ResponseError)
+                return
+            }
+            if data != nil {
+                do {
+                    let responseDict = try
+                        NSJSONSerialization.JSONObjectWithData(data!, options: [])
+                    let token = responseDict["token"] as! String
+                    self.keychainManager?.setPassword(token, account: "token")
+                } catch {
+                    completion(error)
+                }// end catch
+            } else {
+                completion(WebserviceError.DataEmptyError)
+            }// end if/else let theData = data
+        }// end completionHandler
         task.resume()
     }
 }
@@ -40,5 +53,9 @@ protocol ToDoURLSession {
 }
 
 extension NSURLSession: ToDoURLSession {
-    
+}
+
+enum WebserviceError: ErrorType {
+    case DataEmptyError
+    case ResponseError
 }
