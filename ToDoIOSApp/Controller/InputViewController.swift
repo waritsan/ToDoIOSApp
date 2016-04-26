@@ -54,5 +54,6 @@ class InputViewController: UIViewController {
                 }
             }
         }
-    }// func save
+        dismissViewControllerAnimated(true, completion: nil)
+    }// end func save
 }// end class InputViewController

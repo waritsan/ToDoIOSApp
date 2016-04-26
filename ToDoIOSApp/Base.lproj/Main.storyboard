@@ -66,7 +66,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="17Q-10-DqU" secondAttribute="trailing" constant="-20" id="zAp-Ok-NWn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gwD-g7-VHA"/>
+                    <navigationItem key="navigationItem" id="gwD-g7-VHA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="t6X-6y-1Bx">
+                            <connections>
+                                <action selector="addItem:" destination="kxN-mX-Tou" id="THF-qn-5HV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dataProvider" destination="N7s-0h-T0K" id="Y5Q-8N-av2"/>
                         <outlet property="tableView" destination="17Q-10-DqU" id="ynb-az-mIO"/>

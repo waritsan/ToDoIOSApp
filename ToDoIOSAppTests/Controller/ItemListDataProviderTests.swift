@@ -122,6 +122,19 @@ class ItemListDataProviderTests: XCTestCase {
         XCTAssertEqual(tableView.numberOfRowsInSection(0), 1)
         XCTAssertEqual(tableView.numberOfRowsInSection(1), 0)
     }
+    
+    func testSelectingACell_SendsNotification() {
+        let item = ToDoItem(title: "First")
+        sut.itemManager?.addItem(item)
+        expectationForNotification("ItemSelectedNotification", object: nil) { (notification) -> Bool in
+                guard let index = notification.userInfo?["index"] as? Int else {
+                    return false
+                }
+            return index == 0
+        }
+        tableView.delegate?.tableView!(tableView, didSelectRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+        waitForExpectationsWithTimeout(3, handler: nil)
+    }
 }// End class ItemListDataProviderTests
 
 extension ItemListDataProviderTests {
@@ -146,6 +159,15 @@ extension ItemListDataProviderTests {
         
         override func configCellWithItem(item: ToDoItem, checked: Bool = false) {
             toDoItem = item
+        }
+    }
+    
+    class MockNavigationController: UINavigationController {
+        var pushedViewController: UIViewController?
+        
+        override func pushViewController(viewController: UIViewController, animated: Bool) {
+            pushedViewController = viewController
+            super.pushViewController(viewController, animated: animated)
         }
     }
 }// end extension ItemListDataProviderTests

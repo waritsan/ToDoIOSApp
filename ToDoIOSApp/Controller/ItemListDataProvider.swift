@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
+class ItemListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate, ItemManagerSettable {
     var itemManager: ItemManager?
     
     // DataSource
@@ -83,9 +83,26 @@ class ItemListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate
         }
         tableView.reloadData()
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard let itemSelection = Section(rawValue: indexPath.section) else {
+            fatalError()
+        }
+        switch itemSelection {
+        case .ToDo:
+            NSNotificationCenter.defaultCenter().postNotificationName("ItemSelectedNotification", object: self, userInfo: ["index": indexPath.row])
+        default:
+            break
+        }
+    }
 }// end ItemListDataProvider
 
 enum Section: Int {
     case ToDo
     case Done
 }// end enum Section
+
+@objc protocol
+ItemManagerSettable {
+    var itemManager: ItemManager? { get set }
+}// end ItemManagerSettable protocol
