@@ -11,6 +11,7 @@ import XCTest
 
 class ItemCellTests: XCTestCase {
     var tableView: UITableView!
+    var cell: ItemCell!
     
     override func setUp() {
         super.setUp()
@@ -20,6 +21,8 @@ class ItemCellTests: XCTestCase {
         _ = controller.view
         tableView = controller.tableView
         tableView.dataSource = FakeDataSource()
+        cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as! ItemCell
+
     }
     
     override func tearDown() {
@@ -28,22 +31,18 @@ class ItemCellTests: XCTestCase {
     }
     
     func testSUT_HasNameLabel() {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as! ItemCell
         XCTAssertNotNil(cell.titleLabel)
     }
     
     func testSUT_HasLocationLabel() {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as! ItemCell
         XCTAssertNotNil(cell.locationLabel)
     }
     
     func testSUT_HasDateLabel() {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as! ItemCell
         XCTAssertNotNil(cell.dateLabel)
     }
     
     func testConfigWithItem_SetsLabelTexts() {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as! ItemCell
         cell.configCellWithItem(ToDoItem(title: "First", itemDescription: nil, timestamp: 1456150025, location: Location(name: "Home")))
         XCTAssertEqual(cell.titleLabel.text, "First")
         XCTAssertEqual(cell.locationLabel.text, "Home")
@@ -51,7 +50,6 @@ class ItemCellTests: XCTestCase {
     }
     
     func testTitle_ForCheckedTasks_IsStrokeThrough() {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as! ItemCell
         let toDoItem = ToDoItem(title: "First", itemDescription: nil, timestamp: 1456150025, location: Location(name: "Home"))
         cell.configCellWithItem(toDoItem, checked: true)
         let attributedString = NSAttributedString(string: "First", attributes: [NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue])

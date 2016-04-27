@@ -161,13 +161,4 @@ extension ItemListDataProviderTests {
             toDoItem = item
         }
     }
-    
-    class MockNavigationController: UINavigationController {
-        var pushedViewController: UIViewController?
-        
-        override func pushViewController(viewController: UIViewController, animated: Bool) {
-            pushedViewController = viewController
-            super.pushViewController(viewController, animated: animated)
-        }
-    }
 }// end extension ItemListDataProviderTests
