@@ -95,7 +95,7 @@ class ToDoItemTests: XCTestCase {
         XCTAssertTrue(dictionary.isKindOfClass(NSDictionary))
     }
     
-    func xtestCanBeCreatedFromPlistDictionary() {
+    func testCanBeCreatedFromPlistDictionary() {
         let location = Location(name: "Home")
         let item = ToDoItem(title: "The Title", itemDescription: "The Description", timestamp: 1.0, location: location)
         let dict = item.plistDict
