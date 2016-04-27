@@ -74,26 +74,27 @@ class InputViewControllerTests: XCTestCase {
         XCTAssertTrue(actions.contains("save"))
     }
     
-//    func test_GeocoderWordsAsExpected() {
-//        let expectation = expectationWithDescription("Wait for geocode")
-//        CLGeocoder().geocodeAddressString("Infinite Loop 1, Cupertino") {
-//            (placemarks, error) -> Void in
-//            let placemark = placemarks?.first
-//            let coordinate = placemark?.location?.coordinate
-//            guard let latitude = coordinate?.latitude else {
-//                XCTFail()
-//                return
-//            }
-//            guard let longitude = coordinate?.longitude else {
-//                XCTFail()
-//                return
-//            }
-//            XCTAssertEqualWithAccuracy(latitude, 37.3316851, accuracy: 0.000001)
-//            XCTAssertEqualWithAccuracy(longitude, -122.0300674, accuracy: 0.000001)
-//            expectation.fulfill()
-//        }
-//        waitForExpectationsWithTimeout(3, handler: nil)
-//    }
+    // Need internet access
+    func xtest_GeocoderWordsAsExpected() {
+        let expectation = expectationWithDescription("Wait for geocode")
+        CLGeocoder().geocodeAddressString("Infinite Loop 1, Cupertino") {
+            (placemarks, error) -> Void in
+            let placemark = placemarks?.first
+            let coordinate = placemark?.location?.coordinate
+            guard let latitude = coordinate?.latitude else {
+                XCTFail()
+                return
+            }
+            guard let longitude = coordinate?.longitude else {
+                XCTFail()
+                return
+            }
+            XCTAssertEqualWithAccuracy(latitude, 37.3316941, accuracy: 0.000001)
+            XCTAssertEqualWithAccuracy(longitude, -122.030127, accuracy: 0.000001)
+            expectation.fulfill()
+        }
+        waitForExpectationsWithTimeout(3, handler: nil)
+    }
     
     func testSave_DismissesViewController() {
         let mockInputViewController = MockInputViewController()
@@ -105,8 +106,8 @@ class InputViewControllerTests: XCTestCase {
         mockInputViewController.titleTextField.text = "Test Title"
         mockInputViewController.save()
         XCTAssertTrue(mockInputViewController.dismissGotCalled)
-    }// end testSave_DismissesViewController
-}// end class InputViewControllerTests
+    }
+}
 
 extension InputViewControllerTests {
     class MockGeocoder: CLGeocoder {

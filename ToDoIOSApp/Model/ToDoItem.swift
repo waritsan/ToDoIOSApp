@@ -13,12 +13,19 @@ struct ToDoItem : Equatable {
     let itemDescription: String?
     let timestamp: Double?
     let location: Location?
+    var plistDict: NSDictionary {
+        return [:]
+    }
     
     init(title: String, itemDescription: String? = nil, timestamp: Double? = nil, location: Location? = nil) {
         self.title = title
         self.itemDescription = itemDescription
         self.timestamp = timestamp
         self.location = location
+    }
+    
+    init?(dict: NSDictionary) {
+        return nil
     }
 }
 
