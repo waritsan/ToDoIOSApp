@@ -37,23 +37,40 @@ class InputViewControllerTests: XCTestCase {
     }
     
     func testSave_UsesGeoCoderToGetCoordinateFromAddress() {
-        sut.titleTextField.text = "Test Title"
-        sut.dateTextField.text = "22/02/2016"
-        sut.locationTextField.text = "Office"
-        sut.addressTextField.text = "Infinite Lopp 1, Cupertino"
-        sut.descriptionTextField.text = "Test Description"
+        let mockInputViewController = MockInputViewController()
+        
+        mockInputViewController.titleTextField = UITextField()
+        mockInputViewController.dateTextField = UITextField()
+        mockInputViewController.locationTextField = UITextField()
+        mockInputViewController.addressTextField = UITextField()
+        mockInputViewController.descriptionTextField = UITextField()
+        
+        mockInputViewController.titleTextField.text = "Test Title"
+        mockInputViewController.dateTextField.text = "22/02/2016"
+        mockInputViewController.locationTextField.text = "Office"
+        mockInputViewController.addressTextField.text = "Infinite Lopp 1, Cupertino"
+        mockInputViewController.descriptionTextField.text = "Test Description"
         
         let mockGeocoder = MockGeocoder()
-        sut.geocoder = mockGeocoder
+        mockInputViewController.geocoder = mockGeocoder
         
-        sut.itemManager = ItemManager()
-        sut.save()
+        mockInputViewController.itemManager = ItemManager()
+        
+        let expectation = expectationWithDescription("bla")
+        mockInputViewController.completionHandler = {
+            expectation.fulfill()
+        }
+        
+        mockInputViewController.save()
         
         placemark = MockPlacemark()
         let coordinate = CLLocationCoordinate2DMake(37.3316851, -122.0300674)
         placemark.mockCoordinate = coordinate
         mockGeocoder.completionHandler?([placemark], nil)
-        let item = sut.itemManager?.itemAtIndex(0)
+        
+        waitForExpectationsWithTimeout(1, handler: nil)
+        
+        let item = mockInputViewController.itemManager?.itemAtIndex(0)
         let testItem = ToDoItem(title: "Test Title", itemDescription: "Test Description", timestamp: 1456074000, location: Location(name: "Office", coordinate: coordinate))
         XCTAssertEqual(item, testItem)
     }
@@ -131,9 +148,11 @@ extension InputViewControllerTests {
     
     class MockInputViewController: InputViewController {
         var dismissGotCalled = false
+        var completionHandler: (() -> Void)?
         
         override func dismissViewControllerAnimated(flag: Bool, completion: (() -> Void)?) {
             dismissGotCalled = true
+            completionHandler?()
         }
     }// end class MockInputViewController
 }// end extension InputViewControllerTests
