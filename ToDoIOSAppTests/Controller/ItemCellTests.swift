@@ -20,7 +20,8 @@ class ItemCellTests: XCTestCase {
         let controller = storyboard.instantiateViewControllerWithIdentifier("ItemListViewController") as! ItemListViewController
         _ = controller.view
         tableView = controller.tableView
-        tableView.dataSource = FakeDataSource()
+        let fakeDataSource = FakeDataSource()
+        tableView.dataSource = fakeDataSource
         cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as! ItemCell
 
     }
