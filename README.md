@@ -46,3 +46,6 @@ internal class ItemManager {
 - InputViewController
 
 - DataProvider consists of DataSource and Delegate of ItemListViewCntroller. They communicate via protocol.
+
+### Test
+- Travis CI
