@@ -1,5 +1,5 @@
 # To-do
-A simple to-do app which uses TDD approach
+A simple to-do app.
 
 ## Interfaces
 ### Model
